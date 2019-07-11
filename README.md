@@ -25,7 +25,16 @@ Ensure you have the [Heroku CLI](https://devcenter.heroku.com/categories/command
 ```
 heroku create
 ```
+**Set a buildpack**
 
+```
+heroku buildpacks:set https://github.com/HashNuke/heroku-buildpack-elixir.git
+```
+**Set your config vars**
+```
+heroku config:set GIPHY_API_KEY=<<the giphy api key created above>>
+heroku config:set PORT=80
+```
 **Deploy**
 
 ```
