@@ -1,0 +1,2 @@
+defmodule BasecampGiphyElixir do
+end
