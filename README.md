@@ -1,4 +1,4 @@
-# basecamp-giphy
+# basecamp-giphy-elixir
 A Giphy bot of the simplest kind....only for Basecamp... written in Elixir!
 
 # Setup
