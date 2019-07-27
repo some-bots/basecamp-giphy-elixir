@@ -51,3 +51,31 @@ git push heroku master
 1. _Optional_ Upload `assets/giphy logo.png` as the bot's avatar
 1. Name is `giphy` (any name will do)
 1. Enter the url of your Heroku app created above with the `/cmd` on the end
+
+# Testing Locally
+
+_Note: Replace <key> with your actual Giphy API Key._
+
+Install dependencies
+
+```bash
+PORT=4000 GIPHY_API_KEY=<key> mix deps.get
+```
+
+Start the server
+
+```bash
+PORT=4000 GIPHY_API_KEY=<key> heroku local
+```
+
+Open your browser to http://localhost:4000 and you should be greeted with `Hi from Basecamp-giphy-elixir bot! 🤖`.
+
+You can send test queries using curl:
+
+```bash
+ curl -H "Content-Type: application/json" -d '{"command":"test"}' localhost:4000/cmd
+```
+
+or via the convenience url to test in the browser:
+
+http://localhost:4000/cmd/test
